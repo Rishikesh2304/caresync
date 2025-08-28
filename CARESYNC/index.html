@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <img src="img/logo.jpeg" alt="Hospital Logo" />
+
+ <!-- Background Carousel -->
+ <img src="images/1.jpg" alt="Hospital Banner 1" />
+ <img src="images/2.jpg" alt="Hospital Banner 2" />
+ <img src="images/3.jpg" alt="Hospital Banner 3" />
+
+ <!-- About Section -->
+ <img src="images/about.jpg" alt="About Us" />
+
+ <!-- Team Section -->
+ <img src="img/team1.jpg" alt="Doctor Team Member 1" />
+ <img src="img/team2.jpg" alt="Doctor Team Member 2" />
+ <img src="img/team3.jpg" alt="Doctor Team Member 3" />
+ <img src="img/team4.jpg" alt="Doctor Team Member 4" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HMS - Home (Client-only)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">HMS (Client)</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="py-5 bg-light">
+  <div class="container text-center">
+    <h1>Hospital Management — Frontend Prototype</h1>
+    <p class="lead">Prototype client-only UI (no PHP / no MySQL). Data is stored in your browser.</p>
+  </div>
+</header>
+
+<main class="container my-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="card-header">Patient — Register</div>
+        <div class="card-body">
+          <form id="patientRegisterForm">
+            <div class="row">
+              <div class="col-6 mb-2">
+                <input required name="firstName" class="form-control" placeholder="First name">
+              </div>
+              <div class="col-6 mb-2">
+                <input required name="lastName" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+            <div class="mb-2">
+              <input required name="email" type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="mb-2">
+              <input required name="contact" class="form-control" placeholder="Contact number">
+            </div>
+            <div class="mb-2">
+              <input required name="password" type="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="mb-3">
+              <select name="gender" class="form-select">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <button class="btn btn-success" type="submit">Register</button>
+          </form>
+          <div id="registerMessage" class="mt-2"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Patient — Login</div>
+        <div class="card-body">
+          <form id="patientLoginForm">
+            <div class="mb-2">
+              <input required name="email" type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="mb-2">
+              <input required name="password" type="password" class="form-control" placeholder="Password">
+            </div>
+            <button class="btn btn-primary" type="submit">Login as Patient</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="card-header">Doctor — Login</div>
+        <div class="card-body">
+          <form id="doctorLoginForm">
+            <div class="mb-2">
+              <input required name="email" type="email" class="form-control" placeholder="Doctor email">
+            </div>
+            <div class="mb-2">
+              <input required name="password" type="password" class="form-control" placeholder="Password">
+            </div>
+            <button class="btn btn-primary" type="submit">Login as Doctor</button>
+          </form>
+          <div class="form-text mt-1">Doctors are seeded on first load. Admin can add more.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Admin — Login</div>
+        <div class="card-body">
+          <form id="adminLoginForm">
+            <div class="mb-2">
+              <input required name="username" class="form-control" placeholder="Admin username">
+            </div>
+            <div class="mb-2">
+              <input required name="password" type="password" class="form-control" placeholder="Password">
+            </div>
+            <button class="btn btn-warning" type="submit">Login as Admin</button>
+          </form>
+          <div class="form-text mt-1">Default admin: <code>admin / admin123</code></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="text-center py-3">
+  <small>Client-only demo — data stored locally in browser (localStorage).</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

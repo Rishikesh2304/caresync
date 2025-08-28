@@ -1,0 +1,7 @@
+/* Minimal styling for the prototype */
+body { background: #f7f9fc; color: #222; }
+header { background: linear-gradient(145deg,#e9f1ff,#f7fbff); }
+.card { box-shadow: 0 6px 18px rgba(25,35,45,0.06); }
+.container h2 { margin-bottom: 1rem; }
+#appointmentsList .card, #docAppointments .card, #allAppointments .card { margin-bottom: 0.6rem; }
+small { color: #666; }
